@@ -1,0 +1,27 @@
+<%- include("partials/header") %>
+
+<div class="container mt-2">
+    <header class="jumbotron">
+        <h1>Enter a New Campground</h1>
+        <hr class="my-4">
+        <a class="btn btn-primary btn-md mb-2" href="/campgrounds" role="button">Back to Campgrounds</a> <a class="btn btn-primary btn-md mb-2" href="/" role="button">Back to Home Page</a>
+    </header>
+
+    <div style="width: 30%; margin: 5px auto;">
+        <form action="/campgrounds" method="post">
+            <div class="container">
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" type="text" name="name" placeholder="Enter Name of Campground">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" type="text" name="image" placeholder="Enter Image URL">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block btn-lg">Submit</button>
+                    </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include("partials/footer") %>

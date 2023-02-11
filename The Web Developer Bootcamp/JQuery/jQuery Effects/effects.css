@@ -1,0 +1,67 @@
+#button {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+#container-fade {
+    width: 50%;
+    height: 50%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#container-toggle {
+    width: 50%;
+    height: 50%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box-fade {
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+    color: white;
+    text-align: center;
+}
+
+.box-toggle {
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+    color: white;
+    text-align: center;
+}
+
+#container-slide {
+    width: 50%;
+    height: 50%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box-slide {
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+    color: white;
+    text-align: center;
+}
+
+.box-slide {
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,18 @@
+<%- include("partials/header") %>
+
+<div class="container mt-2">
+    <header class="jumbotron">
+        <h1><%= campground.name %></h1>
+        <hr class="my-4">
+        <a class="btn btn-primary btn-md mb-2" href="/campgrounds" role="button">Back to Campgrounds</a> <a class="btn btn-primary btn-md mb-2" href="/" role="button">Back to Home Page</a>
+    </header>
+
+<img src="<%= campground.image %>" >
+
+<p> <%= campground.description %> </p>
+
+<% campground.comments.forEach(function(comment) { %>
+    <p><strong><%= comment.author %></strong> - <%= comment.text %></p>
+<% }) %> 
+
+<%- include("partials/footer") %>
