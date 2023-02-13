@@ -21,11 +21,7 @@ router.get('/admin/products/new', requireAuth, (req, res) => {
 });
 
 router.post(
-  '/admin/products/new',
-  requireAuth,
-  upload.single('image'),
-  [requireTitle, requirePrice],
-  handleErrors(productsNewTemplate),
+  '/admin/products/new', requireAuth, upload.single('image'), [requireTitle, requirePrice], handleErrors(productsNewTemplate),
   async (req, res) => {
     const image = req.file.buffer.toString('base64');
     const { title, price } = req.body;
@@ -47,10 +43,7 @@ router.get('/admin/products/:id/edit', requireAuth, async (req, res) => {
 });
 
 router.post(
-  '/admin/products/:id/edit',
-  requireAuth,
-  upload.single('image'),
-  [requireTitle, requirePrice],
+  '/admin/products/:id/edit', requireAuth, upload.single('image'), [requireTitle, requirePrice],
   handleErrors(productsEditTemplate, async req => {
     const product = await productsRepo.getOne(req.params.id);
     return { product };
