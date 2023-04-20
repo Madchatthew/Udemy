@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const chalk = require('chalk');
 
 class Runner {
     constructor() {
@@ -16,17 +17,17 @@ class Runner {
                 beforeEaches.forEach(func => func());
                 try {
                 fn();
-                console.log(`OK - ${desc}`);
+                console.log(chalk.green(`OK - ${desc}`));
                 } catch (err) {
-                    console.log(`X - ${desc}`);
-                    console.log('\t', err.message);
+                    console.log(chalk.red(`X - ${desc}`));
+                    console.log(chalk.red('\t', err.message));
                 };
             };
 
             try {
                 require(file.name);
             } catch (err) {
-                console.log(err);
+                console.log(chalk.red(err));
             }
         };
     };
