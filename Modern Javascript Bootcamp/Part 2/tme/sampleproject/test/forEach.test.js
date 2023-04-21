@@ -24,5 +24,3 @@ it('should sum arr', () => {
 it('beforeEach is ran each time', () => {
     assert.strictEqual(numbers.length, 4);
 })
-
-sldkf;skdjf;lksjdf;lk
