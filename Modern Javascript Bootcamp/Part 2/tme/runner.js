@@ -15,16 +15,16 @@ class Runner {
             console.log(chalk.gray(`---- ${file.shortName}`));
             const beforeEaches = [];
             global.render = render;
-            global.beforeEach = (fn) => {
+            global.beforeEach = fn => {
                 beforeEaches.push(fn);
             }
-            global.it = (desc, fn) => {
+            global.it = async (desc, fn) => {
                 beforeEaches.forEach(func => func());
                 try {
-                fn();
+                await fn();
                 console.log(chalk.green(`\tOK - ${desc}`));
                 } catch (err) {
-                    const message = err.message.replace(/\n/g, '\n\t\t')
+                    const message = err.message.replace(/\n/g, '\n\t\t');
                     console.log(chalk.red(`\tX - ${desc}`));
                     console.log(chalk.red('\t', message));
                 };
